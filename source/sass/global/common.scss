@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-m {
+  font-weight: 300;
+  @include adaptiveDesktopToMobile('font-size', 40, 22);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  @include adaptiveDesktopToMobile('font-size', 16, 14);
+  @include adaptiveDesktopToMobile('line-height', 22, 16);
+}
+
+.separator-wrapper {
+  position: relative;
+  height: 40px;
+  @include adaptiveDesktopToMobile('margin-bottom', 40, 20);
+}
+
+.separator {
+  width: calc(100vw - 17px);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: unset;
+  object-fit: cover;
+  min-height: 40px;
+
+  @include vp-1279 {
+    width: 100vw;
+  }
+}

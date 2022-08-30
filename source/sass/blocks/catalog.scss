@@ -1,0 +1,59 @@
+.catalog {
+  @include adaptiveDesktopToMobile('margin-bottom', 60, 40);
+}
+.catalog__list {
+  @include reset-list;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  @include adaptiveDesktopToMobile('row-gap', 50, 30);
+
+  @include vp-1023 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include vp-767 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.catalog__list-item {
+}
+.catalog__card {
+  display: flex;
+  flex-direction: column;
+  @include adaptiveDesktopToMobile('padding-top', 20, 10);
+  @include adaptiveDesktopToMobile('padding-bottom', 20, 10);
+  @include adaptiveDesktopToMobile('padding-right', 20, 10);
+  @include adaptiveDesktopToMobile('padding-left', 20, 10);
+  height: 100%;
+  transition: box-shadow $trans-default, border-radius $trans-default;
+
+  &:hover {
+    box-shadow: 0px 5.23186px 13.9516px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+  }
+}
+.catalog__card-photo {
+  @include adaptiveDesktopToMobile('height', 380, 180);
+  object-fit: contain;
+}
+.catalog__card-title {
+  font-weight: 600;
+  @include adaptiveDesktopToMobile('font-size', 20, 14);
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0;
+  @include adaptiveDesktopToMobile('margin-top', 20, 10);
+}
+.catalog__card-description {
+  @include adaptiveDesktopToMobile('font-size', 16, 12);
+}
+.catalog__card-more {
+  margin-top: auto;
+
+  @include vp-767 {
+    padding: 12px;
+  }
+}

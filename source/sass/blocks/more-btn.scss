@@ -1,0 +1,23 @@
+.more-btn {
+  background: $color-solitude;
+  @include adaptiveDesktopToMobile('border-radius', 20, 14);
+  @include adaptiveDesktopToMobile('width', 60, 48);
+  @include adaptiveDesktopToMobile('height', 40, 28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform $trans-default;
+
+  &::after {
+    content: '';
+    @include adaptiveDesktopToMobile('width', 7, 7);
+    @include adaptiveDesktopToMobile('height', 10, 10);
+    background-image: url('../img/svg/arrow.svg');
+    background-size: cover;
+    transform: rotate(90deg);
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

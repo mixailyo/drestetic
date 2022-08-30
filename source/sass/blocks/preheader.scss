@@ -1,0 +1,44 @@
+.preheader {
+  background-color: $color-picton-blue;
+  @include adaptiveDesktopToMobile('padding', 30, 15);
+  color: $color-default-white;
+  position: relative;
+  text-align: center;
+
+  &--closed {
+    display: none;
+  }
+}
+.preheader__close {
+  position: absolute;
+  @include adaptiveDesktopToMobile('top', 26, 16);
+  @include adaptiveDesktopToMobile('right', 50, 16);
+
+  transition: opacity $trans-default;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+.preheader__close-icon {
+  @include adaptiveDesktopToMobile('width', 24, 16);
+  @include adaptiveDesktopToMobile('height', 24, 16);
+}
+.preheader__description {
+  margin: 0 0 30px 0;
+  font-size: 20px;
+}
+.preheader__link {
+  font-size: 20px;
+  letter-spacing: 0.022em;
+  color: $color-tuna;
+  padding: 10px 15px;
+  background: $color-default-white;
+  border-radius: 5px;
+  transition: opacity $trans-default;
+  display: inline-block;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

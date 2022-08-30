@@ -13,7 +13,7 @@ module.exports = {
       prefer: {returns: 'return'},
     }],
 
-    'no-console': 'error',
+    'no-console': '0',
     'no-constant-condition': 'error',
     'no-control-regex': 'error',
     'no-debugger': 'error',

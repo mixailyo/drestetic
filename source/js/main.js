@@ -1,5 +1,18 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {initTabs} from './modules/tabs/init-tabs';
+import {initAccordions} from './modules/accordions/init-accordion';
+
+import {preheader} from './modules/preheader';
+import {header} from './modules/header';
+import { banner } from './modules/banner';
+import { equipment } from './modules/equipment';
+import { use } from './modules/use';
+import { moreBtn } from './modules/more-btn';
+import { materials } from './modules/materials';
+import { card } from './modules/card';
+import { methods } from './modules/methods';
+
 
 // ---------------------------------
 
@@ -9,6 +22,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  preheader();
+  header();
+  banner();
 
   // Modules
   // ---------------------------------
@@ -17,30 +33,14 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    initTabs();
+    initAccordions();
+
+    equipment();
+    use();
+    moreBtn();
+    materials();
+    card();
+    methods();
   });
 });
-
-// ---------------------------------
-
-// ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
-
-// привязывайте js не на классы, а на дата атрибуты (data-validate)
-
-// вместо модификаторов .block--active используем утилитарные классы
-// .is-active || .is-open || .is-invalid и прочие (обязателен нейминг в два слова)
-// .select.select--opened ❌ ---> [data-select].is-open ✅
-
-// выносим все в дата атрибуты
-// url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
-
-// для адаптивного JS используейтся matchMedia и addListener
-// const breakpoint = window.matchMedia(`(min-width:1024px)`);
-// const breakpointChecker = () => {
-//   if (breakpoint.matches) {
-//   } else {
-//   }
-// };
-// breakpoint.addListener(breakpointChecker);
-// breakpointChecker();
-
-// используйте .closest(el)

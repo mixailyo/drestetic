@@ -1,0 +1,38 @@
+.article {
+  margin-bottom: 35px;
+}
+.article__title {
+  font-weight: 600;
+  @include adaptiveDesktopToMobile('font-size', 20, 14);
+}
+.article__date {
+  @include adaptiveDesktopToMobile('font-size', 16, 14);
+}
+.article__photos {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @include adaptiveDesktopToMobile('gap', 50, 20);
+
+  @include vp-767 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.article__photo {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 15px;
+
+  @include vp-767 {
+    max-height: 200px;
+
+    &:nth-child(3) {
+      grid-column: span 2;
+    }
+  }
+}
+.article__text {
+  margin-top: 24px;
+  @include adaptiveDesktopToMobile('font-size', 18, 14);
+  line-height: 1.22;
+}

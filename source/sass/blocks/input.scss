@@ -1,0 +1,10 @@
+.input {
+  border: 1px solid $color-pink-swan;
+  border-radius: $border-radius-default;
+  padding: 12px 20px;
+  outline: none;
+
+  &::placeholder {
+    color: $color-pink-swan;
+  }
+}

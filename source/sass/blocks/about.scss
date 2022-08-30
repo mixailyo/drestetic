@@ -1,0 +1,65 @@
+.about {
+  @include adaptiveDesktopToMobile('margin-bottom', 50, 25);
+}
+.about__photos {
+  display: grid;
+  grid-template-columns: 1fr 1.62fr 1.54fr;
+  gap: 25px;
+  margin: 25px 0 35px;
+
+  @include vp-767 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;;
+  }
+}
+.about__photo {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+
+  @include vp-767 {
+    max-height: 135px;
+    
+    &:nth-child(1) {
+      order: 1;
+    }
+    &:nth-child(2) {
+      grid-column: span 2;
+      order: 3;
+    }
+    &:nth-child(3) {
+      order: 2;
+    }
+  }
+}
+.about__list-title {
+  font-weight: 600;
+  @include adaptiveDesktopToMobile('font-size', 18, 16);
+  color: $color-picton-blue;
+}
+.about__list {
+  padding: 0;
+  padding-left: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+  row-gap: 5px;
+  max-width: 1100px;
+  @include adaptiveDesktopToMobile('margin-bottom', 38, 23);
+
+  @include vp-767 {
+    grid-template-columns: auto;
+  }
+}
+.about__list-item {
+  @include adaptiveDesktopToMobile('font-size', 16, 14);
+  line-height: 1.38;
+  margin-bottom: 5px;
+}
+.about__signature {
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.38;
+  @include adaptiveDesktopToMobile('font-size', 16, 14);
+}

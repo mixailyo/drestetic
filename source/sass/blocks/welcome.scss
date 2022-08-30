@@ -1,0 +1,19 @@
+.welcome {
+  margin-top: 25px;
+  @include adaptiveDesktopToMobile('margin-bottom', 50, 40);
+
+  .container {
+    display: grid;
+    grid-template-columns: 2.85fr 1fr;
+    gap: 34px;
+  }
+
+  @include vp-1279 {
+    .container {
+      grid-template-columns: auto;
+    }
+  }
+}
+
+
+

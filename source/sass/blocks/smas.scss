@@ -1,0 +1,152 @@
+.smas {
+  @include adaptiveDesktopToMobile('font-size', 18, 14);
+
+  a {
+    color: $color-picton-blue;
+    text-decoration: underline;
+  }
+
+  .paragraph {
+    @include adaptiveDesktopToMobile('font-size', 18, 14);
+  }
+
+  @include vp-1023 {
+    text-align: center;
+  }
+}
+.smas__about {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  @include adaptiveDesktopToMobile('gap', 40, 26);
+
+  @include vp-1023 {
+    grid-template-columns: auto;
+  }
+}
+.smas__about-photo {
+  grid-row: span 3;
+
+  @include vp-1023 {
+    grid-row: unset;
+    order: 2;
+    margin: 0 auto; 
+  }
+}
+.smas__about-subtitle {
+  font-weight: 600;
+  @include adaptiveDesktopToMobile('font-size', 20, 16);
+  @include adaptiveDesktopToMobile('line-height', 24, 18);
+  @include adaptiveDesktopToMobile('margin-top', 40, 0);
+
+  @include vp-1023 {
+    order: 1;
+  }
+}
+.smas__about-main-text {
+  @include vp-1023 {
+    order: 3;
+  }
+}
+.smas__about-title {
+  font-weight: 600;
+  @include adaptiveDesktopToMobile('font-size', 20, 16);
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.smas__about-description {
+  @include adaptiveDesktopToMobile('font-size', 18, 14);
+  @include adaptiveDesktopToMobile('line-height', 22, 16);
+}
+.smas__illustrations {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include adaptiveDesktopToMobile('margin-top', 50, 40);
+  @include adaptiveDesktopToMobile('margin-bottom', 40, 20);
+
+  @include vp-1279 {
+    flex-direction: column;
+  }
+}
+.smas__illustration {
+  @include vp-1279 {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+.smas__hipro {
+  @include adaptiveDesktopToMobile('margin-top', 50, 40);
+}
+.smas__hipro-wrapper {
+  @include adaptiveDesktopToMobile('margin-top', 60, 30);
+  display: flex;
+  align-items: center;
+
+  @include vp-1023 {
+    flex-direction: column
+  }
+}
+.smas__hipro-img {
+}
+.smas__hipro-text {
+  @include adaptiveDesktopToMobile('margin-left', 135, 0);
+}
+.smas__hipro-title {
+  font-weight: 700;
+  @include adaptiveDesktopToMobile('font-size', 48, 22);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $color-picton-blue;
+  margin: 0;
+}
+.smas__hipro-description {
+}
+.smas__hipro-list-title {
+  @include adaptiveDesktopToMobile('font-size', 20, 16);
+  margin: 30px 0 0 0;
+}
+.smas__hipro-list {
+  padding-left: 30px;
+  text-align: left
+}
+.smas__hipro-list-item {
+}
+.smas__footer {
+  @include adaptiveDesktopToMobile('margin-top', 60, 40);
+  @include adaptiveDesktopToMobile('margin-bottom', 60, 40);
+}
+.smas__footer-wrapper {
+  display: flex;
+
+  @include vp-1023 {
+    flex-direction: column;
+  }
+}
+.smas__footer-img {
+  @include adaptiveDesktopToMobile('margin-right', 50, 0);
+  border-radius: 15px;
+
+  @include vp-1023 {
+    margin: 0 auto;
+  }
+}
+.smas__footer-text {
+}
+.smas__footer-list-title {
+  font-weight: 600;
+  @include adaptiveDesktopToMobile('font-size', 20, 16);
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.smas__footer-list {
+  padding-left: 30px;
+  text-align: left;
+}
+.smas__footer-list-item {
+}

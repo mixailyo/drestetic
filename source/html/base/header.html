@@ -1,35 +1,82 @@
-<header class="header @@if (context.mod) { header--@@mod }">
+<header class="header">
   <div class="container">
-    @@if (!context.index) {
-      <a class="header__logo" href="index.html" aria-label="Переход на главную">
-        Логотип
-      </a>
-    }
-    @@if (context.index) {
-      <span class="header__logo">
-        Логотип
-      </span>
-    }
-
-    <nav class="main-nav">
-      <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-        <svg width="20" height="20" aria-hidden="true">
-          <use xlink:href="#icon-burger"></use>
-        </svg>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { is-active }" @@if (context.headerActiveLinkIndex !== 0) { href="#" }>Страница 1</a>
+    <a href="/" class="header__logo">
+      <svg class="header__logo-img" width="385" height="71">
+        <use xlink:href="#logo"></use>
+      </svg>
+      <div class="header__logo-text">
+        Аппараты для косметологии, гинекологии и&nbsp;хирургии
+      </div>
+    </a>
+    <div class="header__right-wrapper">
+      <nav class="header__menu">
+        <button class="header__menu-close">
+          <svg class="header__menu-close-icon" width="24" height="24">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </button>
+        <ul class="header__menu-list">
+          <li class="header__menu-list-item header__menu-list-item--mobile">
+            <a href="#" class="header__menu-link">КАТАЛОГ</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { is-active }" @@if (context.headerActiveLinkIndex !== 1) { href="#" }>Страница 2</a>
+          <li class="header__menu-list-item">
+            <a href="#" class="header__menu-link">КЛИЕНТАМ</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { is-active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>Страница 3</a>
+          <li class="header__menu-list-item">
+            <a href="#" class="header__menu-link">ПОДДЕРЖКА</a>
+          </li>
+          <li class="header__menu-list-item">
+            <a href="#" class="header__menu-link">ОБУЧЕНИЕ</a>
+          </li>
+          <li class="header__menu-list-item">
+            <a href="#" class="header__menu-link">ОТЗЫВЫ</a>
+          </li>
+          <li class="header__menu-list-item">
+            <a href="#" class="header__menu-link">БЛОГ</a>
+          </li>
+          <li class="header__menu-list-item">
+            <a href="#" class="header__menu-link">О КОМПАНИИ</a>
           </li>
         </ul>
+      </nav>
+      <div class="header__utility-wrapper">
+        <button class="header__burger">
+          <svg class="header__burger-icon" width="28" height="21">
+            <use xlink:href="#burger"></use>
+          </svg>
+        </button>
+        <a href="#" class="header__link">
+          <svg class="header__link-icon" width="25" height="25">
+            <use xlink:href="#icon-search"></use>
+          </svg>
+        </a>
+        <a href="#" class="header__link">
+          <svg class="header__link-icon" width="25" height="25">
+            <use xlink:href="#icon-whatsapp"></use>
+          </svg>
+        </a>
+        <a href="#" class="header__link">
+          <svg class="header__link-icon" width="25" height="25">
+            <use xlink:href="#icon-phone"></use>
+          </svg>
+        </a>
+        <a href="#" class="header__catalog-link">
+          Каталог
+          <svg class="header__catalog-link-icon" width="19" height="19">
+            <use xlink:href="#icon-catalog"></use>
+          </svg>
+        </a>
+        <a href="#" class="header__account-link" style="display: none;">
+          <svg class="header__account-link-icon" width="23" height="23">
+            <use xlink:href="#icon-account"></use>
+          </svg>
+          Войти
+        </a>
+        <div class="header__search" style="display: none;">
+          <input type="text" class="header__search-input input" placeholder="Поиск по сайту">
+        </div>
+        <a href="tel:+74950252321" class="header__phone">+7 (495) 025-23-21</a>
       </div>
-    </nav>
+    </div>
   </div>
 </header>

@@ -1,3 +1,5 @@
+@import '../mixins.scss';
+
 /* stylelint-disable */
 /**
  * Swiper 7.4.1
@@ -611,4 +613,30 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   overflow: hidden;
+}
+
+
+// 
+
+.swiper-navigation {
+}
+.swiper-navigation__btn {
+  position: absolute;
+  top: 30%;
+  display: inline-flex;
+  align-items: center;
+  z-index: 2;
+  @include adaptiveDesktopToMobile('width', 46, 32);
+  @include adaptiveDesktopToMobile('height', 46, 32);
+
+  &--prev {
+    transform: rotate(180deg);
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+  }
+}
+.swiper-navigation__btn-icon {
 }

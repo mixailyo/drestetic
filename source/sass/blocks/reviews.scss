@@ -1,0 +1,25 @@
+.reviews {
+}
+.reviews__list {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @include adaptiveDesktopToMobile('column-gap', 74, 14);
+  @include adaptiveDesktopToMobile('row-gap', 45, 20);
+  @include adaptiveDesktopToMobile('margin-top', 30, 10);
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.review {
+  @include adaptiveDesktopToMobile('height', 212, 92);
+  @include adaptiveDesktopToMobile('border-radius', 15, 10);
+  overflow: hidden;
+}
+.review__media {
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,86 @@
+.managers {
+  margin-top: 30px;
+  @include adaptiveDesktopToMobile('margin-bottom', 60, 45);
+}
+.managers__list {
+  @include reset-list;
+}
+.manager {
+  display: grid;
+  grid-template-columns: 220px auto;
+  @include adaptiveDesktopToMobile('column-gap', 60, 15);
+  row-gap: 10px;
+
+  &:not(:last-child) {
+    @include adaptiveDesktopToMobile('margin-bottom', 60, 30);
+  }
+
+  @include vp-767 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.manager__photo-wrapper {
+  grid-row: span 6;
+
+  @include vp-767 {
+    grid-row: span 2;
+    position: relative;
+    padding-top: 100%;
+    filter: drop-shadow(0px 3.79605px 10.1228px rgba(0, 0, 0, 0.15));
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+}
+.manager__photo {
+  @include vp-767 {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    top: 0;
+    left: 0;
+  }
+}
+
+.manager__name {
+  font-weight: 600;
+  @include adaptiveDesktopToMobile('font-size', 24, 18);
+  text-transform: uppercase;
+  color: $color-picton-blue;
+  margin: 0;
+  @include adaptiveDesktopToMobile('margin-top', 60, 20);
+}
+.manager__position {
+  font-weight: 600;
+  @include adaptiveDesktopToMobile('font-size', 18, 14);
+  @include adaptiveDesktopToMobile('line-height', 22, 17);
+  letter-spacing: 0.03em;
+
+  @include vp-767 {
+    margin-top: -10px;
+  }
+}
+.manager__description {
+  @include adaptiveDesktopToMobile('font-size', 18, 14);
+
+  @include vp-767 {
+    grid-column: span 2;
+  }
+}
+.manager__phone {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  @include adaptiveDesktopToMobile('font-size', 24, 18);
+
+  @include vp-767 {
+    grid-column: span 2;
+  }
+}
+.manager__phone-icon {
+  margin-right: 15px;
+}

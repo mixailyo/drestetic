@@ -15,9 +15,9 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: $fz-default;
-  line-height: 24px;
-  font-family: $ff-placeholder;
-  color: $color-default-black;
+  line-height: 1.5;
+  font-family: $ff-default;
+  color: $color-tuna;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,7 +35,7 @@ body {
 }
 
 a {
-  color: $color-default-black;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -43,7 +43,12 @@ img,
 video {
   display: block;
   max-width: 100%;
+  max-height: 100%;
   height: auto;
+}
+
+svg {
+  max-width: 100%;
 }
 
 textarea {
@@ -126,4 +131,12 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+}
+
+button {
+  border: unset;
+  background-color: unset;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
 }
