@@ -12,7 +12,7 @@ import { moreBtn } from './modules/more-btn';
 import { materials } from './modules/materials';
 import { card } from './modules/card';
 import { methods } from './modules/methods';
-
+import { lazyLoadYouTube } from './modules/lazy-load-youtube';
 
 // ---------------------------------
 
@@ -42,5 +42,6 @@ window.addEventListener('DOMContentLoaded', () => {
     materials();
     card();
     methods();
+    lazyLoadYouTube();
   });
 });
